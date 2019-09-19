@@ -1,2 +1,23 @@
-#!/usr/bin/env php7.2
+#! /usr/bin/env php
 "Welcome to the Brain Games!"
+
+<?php
+
+use function BrainGames\Cli\run;
+
+$loadPath1 = __DIR__.'/../../../autoload.php';
+$loadPath2 = __DIR__.'/../vendor/autoload.php';
+if (file_exists($loadPath1)) {
+    require_once $loadPath1;
+} else {
+    require_once $loadPath2;
+}
+
+run();
+
+    
+    
+   
+
+    
+    
