@@ -8,9 +8,17 @@
             "email": "roman_planeta@mail.ru"
         }
     ],
+    "scripts": {
+        "phpcs": "phpcs"
+    },
     "bin": [
         "bin/brain-games"
-    ],
-    "minimum-stability": "stable",
-    "require": {}
+    ],   
+    "autoload": {
+        "files": ["src/cli.php"]
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "wp-cli/php-cli-tools": "^0.11.11"
+    }
 }
