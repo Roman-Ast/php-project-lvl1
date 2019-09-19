@@ -1,0 +1,13 @@
+{
+    "name": "roman/php-project-lvl1",
+    "description": "hexlet-project",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Roman-Ast",
+            "email": "roman_planeta@mail.ru"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
