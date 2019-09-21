@@ -1,7 +1,7 @@
 <?php
 
 /**
- * CLI functions to interraction with user
+ * CLI function to greeting users
  *
  * PHP version 7.2
  *
@@ -19,9 +19,9 @@ use function cli\line;
 use function cli\prompt;
 
 /**
- * This function start this project
+ * This function start the game
  *
- * @return void
+ * @return $name
  */
 function run()
 {

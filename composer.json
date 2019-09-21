@@ -12,11 +12,16 @@
         "phpcs": "phpcs"
     },
     "bin": [
-        "bin/brain-games"
+        "bin/brain-games",
+        "bin/brain-even"
     ],   
     "autoload": {
-        "files": ["src/cli.php"]
+        "files": [
+            "src/cli.php",
+            "src/game.php"
+        ]
     },
+    "license": "MIT",
     "minimum-stability": "dev",
     "require": {
         "wp-cli/php-cli-tools": "^0.11.11"
