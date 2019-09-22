@@ -7,3 +7,5 @@ My first hexlet-project-lvl1
 <a href="https://travis-ci.org/Roman-Ast/php-project-lvl1/jobs/587059515">
 <img src="https://travis-ci.org/Roman-Ast/php-project-lvl1.svg?branch=master">
 </a>
+
+[![asciicast](https://asciinema.org/a/gklLF4HAjuXdjWspdQjmi8BF9.svg)](https://asciinema.org/a/gklLF4HAjuXdjWspdQjmi8BF9)
