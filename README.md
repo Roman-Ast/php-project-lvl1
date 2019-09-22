@@ -8,7 +8,7 @@
 
 ### Installation of brain-games package:
 
-[![asciicast](https://asciinema.org/a/GzcNTbqLtgzfd7fB1k1vuLUau.svg)](https://asciinema.org/a/GzcNTbqLtgzfd7fB1k1vuLUau)
+[![asciicast](https://asciinema.org/a/Su0n0Q4RLWh4YsV85ON7ys9VZ.svg)](https://asciinema.org/a/Su0n0Q4RLWh4YsV85ON7ys9VZ)
 
 ### Launch brain-even:
 
