@@ -19,7 +19,8 @@
         "files": [
             "src/cli.php",
             "src/even.php",
-            "src/gcd.php"
+            "src/gcd.php",
+            "src/progression.php"
         ]
     },
     "license": "MIT",
