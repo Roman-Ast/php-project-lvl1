@@ -8,4 +8,4 @@ My first hexlet-project-lvl1
 <img src="https://travis-ci.org/Roman-Ast/php-project-lvl1.svg?branch=master">
 </a>
 
-[![asciicast](https://asciinema.org/a/gklLF4HAjuXdjWspdQjmi8BF9.svg)](https://asciinema.org/a/gklLF4HAjuXdjWspdQjmi8BF9)
+<script id="asciicast-gklLF4HAjuXdjWspdQjmi8BF9" src="https://asciinema.org/a/gklLF4HAjuXdjWspdQjmi8BF9.js" async size="small"></script>
