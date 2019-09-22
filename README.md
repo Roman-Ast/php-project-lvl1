@@ -6,7 +6,14 @@
 
 
 
-### Installation:
+### Installation of brain-games package:
 
+[![asciicast](https://asciinema.org/a/GzcNTbqLtgzfd7fB1k1vuLUau.svg)](https://asciinema.org/a/GzcNTbqLtgzfd7fB1k1vuLUau)
 
-[![asciicast](https://asciinema.org/a/gklLF4HAjuXdjWspdQjmi8BF9.svg)](https://asciinema.org/a/gklLF4HAjuXdjWspdQjmi8BF9)
+### Launch brain-even:
+
+[![asciicast](https://asciinema.org/a/WBcxYh5uY1kNTAI7NRQIQmPW2.svg)](https://asciinema.org/a/WBcxYh5uY1kNTAI7NRQIQmPW2)
+
+### Launch brain-gcd:
+
+[![asciicast](https://asciinema.org/a/nBmzSyF1q2r3DMMrd9dbBOaIo.svg)](https://asciinema.org/a/nBmzSyF1q2r3DMMrd9dbBOaIo)

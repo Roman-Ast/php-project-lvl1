@@ -18,7 +18,8 @@
     "autoload": {
         "files": [
             "src/cli.php",
-            "src/game.php"
+            "src/even.php",
+            "src/gcd.php"
         ]
     },
     "license": "MIT",

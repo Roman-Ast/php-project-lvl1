@@ -1,11 +1,11 @@
 #! /usr/bin/env php
 "Welcome to the Brain Games!"
-Answer "yes" if the number is even, otherwise answer "no".
+Find the greatest common divisor of given numbers.
 
 <?php
 
 use function BrainGames\Cli\run;
-use function BrainGames\Cli\gameEven;
+use function BrainGames\Cli\gameGcd;
 
 $loadPath1 = __DIR__.'/../../../autoload.php';
 $loadPath2 = __DIR__.'/../vendor/autoload.php';
@@ -17,4 +17,4 @@ if (file_exists($loadPath1)) {
 
 $user = run();
 print_r("\n");
-gameEven($user);
+gameGcd($user);

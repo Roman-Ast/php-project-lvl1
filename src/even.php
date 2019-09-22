@@ -35,7 +35,7 @@ function isEven($num)
  *
  * @return game or void;
  */
-function game($user, $round = 1)
+function gameEven($user, $round = 1)
 {
     $random = rand(0, 100);
     line("Question: {$random}");
@@ -49,7 +49,7 @@ function game($user, $round = 1)
             line("Congratulations, {$user}!");
             return;
         }
-        game($user, $round += 1);
+        gameEven($user, $round += 1);
     } else {
         line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$isEven}'");
         line("Let's try again, {$user}!");
