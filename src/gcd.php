@@ -22,7 +22,7 @@ use function cli\prompt;
  *
  * @param integer $n - is the first number
  * @param integer $m - is the second number
- * 
+ *
  * @return gcd;
  */
 function findGcd($n, $m)
@@ -39,7 +39,7 @@ function findGcd($n, $m)
  *
  * @param integer $n - is the first number
  * @param integer $m - is the second number
- * 
+ *
  * @return gcd;
  */
 function hasGcd($n, $m)
