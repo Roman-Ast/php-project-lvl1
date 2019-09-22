@@ -8,7 +8,7 @@
 
 ### Installation of brain-games package:
 
-[![asciicast](https://asciinema.org/a/Su0n0Q4RLWh4YsV85ON7ys9VZ.svg)](https://asciinema.org/a/Su0n0Q4RLWh4YsV85ON7ys9VZ)
+[![asciicast](https://asciinema.org/a/mn9xr78lU7mHLIDruXaMbSeCs.svg)](https://asciinema.org/a/mn9xr78lU7mHLIDruXaMbSeCs)
 
 ### Launch brain-even:
 
@@ -17,3 +17,7 @@
 ### Launch brain-gcd:
 
 [![asciicast](https://asciinema.org/a/nBmzSyF1q2r3DMMrd9dbBOaIo.svg)](https://asciinema.org/a/nBmzSyF1q2r3DMMrd9dbBOaIo)
+
+### Launch brain-progression
+
+[![asciicast](https://asciinema.org/a/pN5d8xFdLQRgc0HAFsOBiCNDI.svg)](https://asciinema.org/a/pN5d8xFdLQRgc0HAFsOBiCNDI)
