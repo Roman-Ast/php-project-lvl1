@@ -1,4 +1,4 @@
-My first hexlet-project-lvl1
+#Brain-games#
 
 <a href="https://codeclimate.com/github/Roman-Ast/php-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/3664cee03b2c64b323f1/maintainability" /></a>
 
@@ -8,7 +8,7 @@ My first hexlet-project-lvl1
 <img src="https://travis-ci.org/Roman-Ast/php-project-lvl1.svg?branch=master">
 </a>
 
-###Installation:
+###Installation:###
 
 
 [![asciicast](https://asciinema.org/a/gklLF4HAjuXdjWspdQjmi8BF9.svg)](https://asciinema.org/a/gklLF4HAjuXdjWspdQjmi8BF9)
