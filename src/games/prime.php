@@ -1,17 +1,5 @@
 <?php
 
-/**
- * Logic of game 'prime'
- *
- * PHP version 7.2
- *
- * @category PHP
- * @package  Php-project-lvl1
- * @author   Popadinets Roman <roman_planeta@mail.ru>
- * @license  https://github.com/Roman-Ast/php-project-lvl1 MIT
- * @link     https://github.com/Roman-Ast/php-project-lvl1
- */
-
 namespace BrainGames\Cli\games;
 
 use function cli\line;
