@@ -12,58 +12,12 @@
  * @link     https://github.com/Roman-Ast/php-project-lvl1
  */
 
-namespace BrainGames\Cli;
+namespace BrainGames\Cli\games;
 
 use function cli\line;
 use function cli\prompt;
-
-/**
- * This function is to find GCD of two numbers
- *
- * @param integer $n - is the first number
- * @param integer $m - is the second number
- *
- * @return gcd;
- */
-function findGcd($n, $m)
-{
-    if ($m > 0) {
-        return findGcd($m, $n % $m);
-    } else {
-        return abs($n);
-    }
-}
-
-/**
- * This function is to check does two numbers have common GCD
- *
- * @param integer $n - is the first number
- * @param integer $m - is the second number
- *
- * @return gcd;
- */
-function hasGcd($n, $m)
-{
-    $result = findGcd($n, $m);
-    return is_int($result) && $result > 1;
-}
-
-/**
- * This function is to create two numbers that have common GCD
- *
- * @return array of two numbers;
- */
-function makeTwoNumbersWithCommonGcd()
-{
-    $random1 = rand(1, 100);
-    $random2 = rand(1, 100);
-
-    if (!hasGcd($random1, $random2)) {
-        return makeTwoNumbersWithCommonGcd();
-    }
-
-    return [$random1, $random2];
-}
+use function BrainGames\Cli\games\helpers\makeTwoNumbersWithCommonGcd;
+use function BrainGames\Cli\games\helpers\findGcd;
 
 /**
  * This function to interract with users
@@ -80,9 +34,9 @@ function gcd($user, $round = 1)
     line("Question: {$firstNum} {$secondNum}");
     $userAnswer = prompt('Your answer?');
 
-    $gcd = findGcd($random1, $random2);
+    $correct = findGcd($random1, $random2);
 
-    if ((int)$userAnswer === $gcd) {
+    if ((int)$userAnswer === $correctAnswer) {
         line("Correct!");
         if ($round >= 3) {
             line("Congratulations, {$user}!");
@@ -90,7 +44,9 @@ function gcd($user, $round = 1)
         }
         gcd($user, $round += 1);
     } else {
-        line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$gcd}'");
+        line(
+            "'{$userAnswer}' is wrong answer ;(. Correct answer was '{$correct}'"
+        );
         line("Let's try again, {$user}!");
         return;
     }

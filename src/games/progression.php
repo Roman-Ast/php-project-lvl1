@@ -12,27 +12,11 @@
  * @link     https://github.com/Roman-Ast/php-project-lvl1
  */
 
-namespace BrainGames\Cli;
+namespace BrainGames\Cli\games;
 
 use function cli\line;
 use function cli\prompt;
-
-/**
- * This function is to find GCD of two numbers
- *
- * @param integer $constant - is constant step
- *
- * @return array $progression;
- */
-function buildProgression($constant)
-{
-    $first = rand(0, 10);
-    $progression[0] = $first;
-    for ($i = 1; $i < 10; $i++) {
-        $progression[$i] = $progression[$i - 1] + $constant;
-    }
-    return $progression;
-}
+use function BrainGames\Cli\games\helpers\buildProgression;
 
 /**
  * This function is to interract with users

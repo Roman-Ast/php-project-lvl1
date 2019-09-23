@@ -11,32 +11,13 @@
  * @license  https://github.com/Roman-Ast/php-project-lvl1 MIT
  * @link     https://github.com/Roman-Ast/php-project-lvl1
  */
-namespace BrainGames\Cli;
+namespace BrainGames\Cli\games;
 
 use function cli\line;
 use function cli\prompt;
+use function BrainGames\Cli\games\helpers\randomNumber;
+use function BrainGames\Cli\games\helpers\isEven;
 
-/**
- * This function to check for parity
- *
- * @param integer $num - is integer that need to check
- *
- * @return $num;
- */
-function isEven($num)
-{
-    return $num % 2 === 0 ? 'yes' : 'no';
-}
-
-/**
- * This function to create random number
- *
- * @return integer random number;
- */
-function randomNumber()
-{
-    return rand(1, 100);
-}
 /**
  * This function to interract with users
  *
@@ -47,7 +28,7 @@ function randomNumber()
  */
 function even($user, $round = 1)
 {
-    $random = randomNumber();
+    $random = randomNumber(1, 100);
     line("Question: {$random}");
     $userAnswer = prompt('Your answer?');
 

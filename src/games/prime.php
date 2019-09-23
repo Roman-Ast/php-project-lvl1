@@ -12,27 +12,12 @@
  * @link     https://github.com/Roman-Ast/php-project-lvl1
  */
 
-namespace BrainGames\Cli;
+namespace BrainGames\Cli\games;
 
 use function cli\line;
 use function cli\prompt;
-
-/**
- * This function is to check num is it prime or not
- *
- * @param integer $num - is integer that need to check
- *
- * @return string 'answer';
- */
-function isPrime($num)
-{
-    for ($i = 2; $i < sqrt($num); $i++) {
-        if ($num % $i === 0) {
-            return 'no';
-        }
-    }
-    return 'yes';
-}
+use function BrainGames\Cli\games\helpers\randomNumber;
+use function BrainGames\Cli\games\helpers\isPrime;
 
 /**
  * This function is to interract with users
@@ -44,11 +29,11 @@ function isPrime($num)
  */
 function prime($user, $round = 1)
 {
-    $random = rand(1, 500);
+    $random = randomNumber(1, 500);
     line("Question: {$random}");
     $userAnswer = prompt('Your answer?');
 
-    $correctAnswer = isPrime($random);
+    $correct = isPrime($random);
 
     if ($userAnswer === $correctAnswer) {
         line("Correct!");
@@ -59,8 +44,7 @@ function prime($user, $round = 1)
         prime($user, $round += 1);
     } else {
         line(
-            "'{$userAnswer}' is wrong answer ;(. 
-            Correct answer was '{$correctAnswer}'"
+            "'{$userAnswer}' is wrong answer ;(. Correct answer was '{$correct}'"
         );
         line("Let's try again, {$user}!");
         return;
