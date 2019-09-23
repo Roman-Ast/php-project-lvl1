@@ -1,5 +1,17 @@
 <?php
 
+/**
+ * Рelper functions for implementing games
+ *
+ * PHP version 7.2
+ *
+ * @category PHP
+ * @package  Php-project-lvl1
+ * @author   Popadinets Roman <roman_planeta@mail.ru>
+ * @license  https://github.com/Roman-Ast/php-project-lvl1 MIT
+ * @link     https://github.com/Roman-Ast/php-project-lvl1
+ */
+
 namespace BrainGames\Cli\games\helpers;
 
 /**
@@ -93,7 +105,7 @@ function isPrime($num)
 }
 
 /**
- * This function is to find GCD of two numbers
+ * This function is to build progression
  *
  * @param integer $constant - is constant step
  *

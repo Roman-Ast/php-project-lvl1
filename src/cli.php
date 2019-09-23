@@ -12,7 +12,6 @@
  * @link     https://github.com/Roman-Ast/php-project-lvl1
  */
 
-
 namespace BrainGames\Cli;
 
 use function cli\line;
