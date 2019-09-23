@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Logic of game 'even'
+ * CLI function to play game with users
  *
  * PHP version 7.2
  *
