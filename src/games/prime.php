@@ -23,7 +23,7 @@ function prime($user, $round = 1)
 
     $correct = isPrime($random);
 
-    if ($userAnswer === $correctAnswer) {
+    if ($userAnswer === $correct) {
         line("Correct!");
         if ($round >= 3) {
             line("Congratulations, {$user}!");

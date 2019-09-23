@@ -24,7 +24,7 @@ function gcd($user, $round = 1)
 
     $correct = findGcd($firstNum, $secondNum);
 
-    if ((int)$userAnswer === $correctAnswer) {
+    if ((int)$userAnswer === $correct) {
         line("Correct!");
         if ($round >= 3) {
             line("Congratulations, {$user}!");
