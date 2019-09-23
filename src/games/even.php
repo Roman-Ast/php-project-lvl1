@@ -27,6 +27,16 @@ function isEven($num)
 {
     return $num % 2 === 0 ? 'yes' : 'no';
 }
+
+/**
+ * This function to create random number
+ *
+ * @return integer random number;
+ */
+function randomNumber()
+{
+    return rand(1, 100);
+}
 /**
  * This function to interract with users
  *
@@ -37,7 +47,7 @@ function isEven($num)
  */
 function even($user, $round = 1)
 {
-    $random = rand(0, 100);
+    $random = randomNumber();
     line("Question: {$random}");
     $userAnswer = prompt('Your answer?');
 
