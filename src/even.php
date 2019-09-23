@@ -37,11 +37,11 @@ function isEven($num)
  */
 function gameEven($user, $round = 1)
 {
-    $random = rand(0, 100);
-    line("Question: {$random}");
+    $randomNumberForUserChecking = rand(0, 100);
+    line("Question: {$randomNumberForUserChecking}");
     $userAnswer = prompt('Your answer?');
 
-    $isEven = isEven($random);
+    $isEven = isEven($randomNumberForUserChecking);
 
     if ($userAnswer === $isEven) {
         line("Correct!");

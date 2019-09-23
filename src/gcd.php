@@ -58,17 +58,17 @@ function hasGcd($n, $m)
  */
 function gameGcd($user, $round = 1)
 {
-    $random1 = rand(0, 100);
-    $random2 = rand(0, 100);
+    $firstNumber = rand(0, 100);
+    $secondNumber = rand(0, 100);
 
-    if (!hasGcd($random1, $random2)) {
+    if (!hasGcd($firstNumber, $secondNumber)) {
         return gameGcd($user, $round);
     }
 
-    line("Question: {$random1} {$random2}");
+    line("Question: {$firstNumber} {$secondNumber}");
     $userAnswer = prompt('Your answer?');
 
-    $gcd = findGcd($random1, $random2);
+    $gcd = findGcd($firstNumber, $secondNumber);
 
     if ((int)$userAnswer === $gcd) {
         line("Correct!");
