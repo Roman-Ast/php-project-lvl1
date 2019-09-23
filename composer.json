@@ -21,10 +21,10 @@
     "autoload": {
         "files": [
             "src/cli.php",
-            "src/even.php",
-            "src/gcd.php",
-            "src/progression.php",
-            "src/prime.php"
+            "src/games/even.php",
+            "src/games/gcd.php",
+            "src/games/progression.php",
+            "src/games/prime.php"
         ]
     },
     "license": "MIT",

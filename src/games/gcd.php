@@ -73,7 +73,7 @@ function makeTwoNumbersWithCommonGcd()
  *
  * @return game or void;
  */
-function gameGcd($user, $round = 1)
+function gcd($user, $round = 1)
 {
     [$firstNum, $secondNum] = makeTwoNumbersWithCommonGcd();
     
@@ -88,7 +88,7 @@ function gameGcd($user, $round = 1)
             line("Congratulations, {$user}!");
             return;
         }
-        gameGcd($user, $round += 1);
+        gcd($user, $round += 1);
     } else {
         line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$gcd}'");
         line("Let's try again, {$user}!");

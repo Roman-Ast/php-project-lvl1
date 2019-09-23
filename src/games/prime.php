@@ -11,47 +11,57 @@
  * @license  https://github.com/Roman-Ast/php-project-lvl1 MIT
  * @link     https://github.com/Roman-Ast/php-project-lvl1
  */
+
 namespace BrainGames\Cli;
 
 use function cli\line;
 use function cli\prompt;
 
 /**
- * This function to check for parity
+ * This function is to check num is it prime or not
  *
  * @param integer $num - is integer that need to check
  *
- * @return $num;
+ * @return string 'answer';
  */
-function isEven($num)
+function isPrime($num)
 {
-    return $num % 2 === 0 ? 'yes' : 'no';
+    for ($i = 2; $i < sqrt($num); $i++) {
+        if ($num % $i === 0) {
+            return 'no';
+        }
+    }
+    return 'yes';
 }
+
 /**
- * This function to interract with users
+ * This function is to interract with users
  *
  * @param string  $user  - is name of user, recieved from STDIN
  * @param integer $round - is count of rounds completed by user
  *
  * @return game or void;
  */
-function gameEven($user, $round = 1)
+function prime($user, $round = 1)
 {
-    $random = rand(0, 100);
+    $random = rand(1, 500);
     line("Question: {$random}");
     $userAnswer = prompt('Your answer?');
 
-    $isEven = isEven($random);
+    $correctAnswer = isPrime($random);
 
-    if ($userAnswer === $isEven) {
+    if ($userAnswer === $correctAnswer) {
         line("Correct!");
         if ($round >= 3) {
             line("Congratulations, {$user}!");
             return;
         }
-        gameEven($user, $round += 1);
+        prime($user, $round += 1);
     } else {
-        line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$isEven}'");
+        line(
+            "'{$userAnswer}' is wrong answer ;(. 
+            Correct answer was '{$correctAnswer}'"
+        );
         line("Let's try again, {$user}!");
         return;
     }

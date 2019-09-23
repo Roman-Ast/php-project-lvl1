@@ -5,7 +5,7 @@ Answer "yes" if the number is even, otherwise answer "no".
 <?php
 
 use function BrainGames\Cli\run;
-use function BrainGames\Cli\gameEven;
+use function BrainGames\Cli\games\even;
 
 $loadPath1 = __DIR__.'/../../../autoload.php';
 $loadPath2 = __DIR__.'/../vendor/autoload.php';
@@ -17,4 +17,4 @@ if (file_exists($loadPath1)) {
 
 $user = run();
 print_r("\n");
-gameEven($user);
+even($user);

@@ -5,7 +5,7 @@ Find the greatest common divisor of given numbers.
 <?php
 
 use function BrainGames\Cli\run;
-use function BrainGames\Cli\gameGcd;
+use function BrainGames\Cli\games\gcd;
 
 $loadPath1 = __DIR__.'/../../../autoload.php';
 $loadPath2 = __DIR__.'/../vendor/autoload.php';
@@ -17,4 +17,4 @@ if (file_exists($loadPath1)) {
 
 $user = run();
 print_r("\n");
-gameGcd($user);
+gcd($user);

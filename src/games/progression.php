@@ -42,12 +42,13 @@ function buildProgression($constant)
  *
  * @return game or void;
  */
-function gameProgression($user, $round = 1)
+function progression($user, $round = 1)
 {
     $randomIndex = rand(0, 9);
     $rawProgression = buildProgression(rand(1, 10));
     $hiddenElement = array_splice($rawProgression, $randomIndex, 1, '..');
     $strForOutput = implode(' ', $rawProgression);
+    
     line("Question: {$strForOutput}");
     $userAnswer = prompt('Your answer?');
 
@@ -57,7 +58,7 @@ function gameProgression($user, $round = 1)
             line("Congratulations, {$user}!");
             return;
         }
-        gameProgression($user, $round += 1);
+        progression($user, $round += 1);
     } else {
         line(
             "'{$userAnswer}' is wrong answer ;(. 
