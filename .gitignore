@@ -1,6 +1,5 @@
-/vendor/
-logs
-*.swo
-*.swp
-*.cache
-/.vscode/
+#
+vendor/
+
+# vscode configuration
+.vscode/
