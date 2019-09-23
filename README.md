@@ -21,3 +21,7 @@
 ### Launch brain-progression
 
 [![asciicast](https://asciinema.org/a/pN5d8xFdLQRgc0HAFsOBiCNDI.svg)](https://asciinema.org/a/pN5d8xFdLQRgc0HAFsOBiCNDI)
+
+### Launch brain-prime:
+
+[![asciicast](https://asciinema.org/a/Gq16bso59NscBTeua6koERKX4.svg)](https://asciinema.org/a/Gq16bso59NscBTeua6koERKX4)
