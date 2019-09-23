@@ -22,7 +22,7 @@ function gcd($user, $round = 1)
     line("Question: {$firstNum} {$secondNum}");
     $userAnswer = prompt('Your answer?');
 
-    $correct = findGcd($random1, $random2);
+    $correct = findGcd($firstNum, $secondNum);
 
     if ((int)$userAnswer === $correctAnswer) {
         line("Correct!");

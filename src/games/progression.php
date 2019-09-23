@@ -33,7 +33,7 @@ function progression($user, $round = 1)
         progression($user, $round += 1);
     } else {
         line(
-            "'{$userAnswer}' is wrong answer ;(. 
+            "'{$userAnswer}' is wrong answer ;(.
             Correct answer was '{$hiddenElement[0]}'"
         );
         line("Let's try again, {$user}!");
