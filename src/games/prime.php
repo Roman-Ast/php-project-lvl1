@@ -1,7 +1,7 @@
 <?php
 
 /**
- * CLI function to play game with users
+ * Logic of game 'prime'
  *
  * PHP version 7.2
  *
