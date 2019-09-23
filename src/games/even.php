@@ -29,13 +29,13 @@ use function BrainGames\Cli\games\helpers\isEven;
  */
 function even($user, $round = 1)
 {
-    $random = randomNumber(1, 100);
-    line("Question: {$random}");
+    $questionNumber = randomNumber(1, 100);
+    line("Question: {$questionNumber}");
     $userAnswer = prompt('Your answer?');
 
-    $isEven = isEven($random);
+    $correct = isEven($questionNumber);
 
-    if ($userAnswer === $isEven) {
+    if ($userAnswer === $correct) {
         line("Correct!");
         if ($round >= 3) {
             line("Congratulations, {$user}!");
@@ -43,7 +43,7 @@ function even($user, $round = 1)
         }
         even($user, $round += 1);
     } else {
-        line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$isEven}'");
+        line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$correct}'");
         line("Let's try again, {$user}!");
         return;
     }

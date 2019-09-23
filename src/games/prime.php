@@ -29,11 +29,11 @@ use function BrainGames\Cli\games\helpers\isPrime;
  */
 function prime($user, $round = 1)
 {
-    $random = randomNumber(1, 500);
-    line("Question: {$random}");
+    $questionNumber = randomNumber(1, 500);
+    line("Question: {$questionNumber}");
     $userAnswer = prompt('Your answer?');
 
-    $correct = isPrime($random);
+    $correct = isPrime($questionNumber);
 
     if ($userAnswer === $correct) {
         line("Correct!");
