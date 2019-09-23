@@ -49,6 +49,23 @@ function hasGcd($n, $m)
 }
 
 /**
+ * This function is to create two numbers that have common GCD
+ *
+ * @return array of two numbers;
+ */
+function makeTwoNumbersWithCommonGcd()
+{
+    $random1 = rand(1, 100);
+    $random2 = rand(1, 100);
+
+    if (!hasGcd($random1, $random2)) {
+        return makeTwoNumbersWithCommonGcd();
+    }
+
+    return [$random1, $random2];
+}
+
+/**
  * This function to interract with users
  *
  * @param string  $user  - is name of user, recieved from STDIN
@@ -58,17 +75,12 @@ function hasGcd($n, $m)
  */
 function gameGcd($user, $round = 1)
 {
-    $firstNumber = rand(0, 100);
-    $secondNumber = rand(0, 100);
-
-    if (!hasGcd($firstNumber, $secondNumber)) {
-        return gameGcd($user, $round);
-    }
-
-    line("Question: {$firstNumber} {$secondNumber}");
+    [$firstNum, $secondNum] = makeTwoNumbersWithCommonGcd();
+    
+    line("Question: {$firstNum} {$secondNum}");
     $userAnswer = prompt('Your answer?');
 
-    $gcd = findGcd($firstNumber, $secondNumber);
+    $gcd = findGcd($random1, $random2);
 
     if ((int)$userAnswer === $gcd) {
         line("Correct!");
