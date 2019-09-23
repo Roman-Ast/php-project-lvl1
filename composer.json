@@ -15,14 +15,16 @@
         "bin/brain-games",
         "bin/brain-even",
         "bin/brain-gcd",
-        "bin/brain-progression"
+        "bin/brain-progression",
+        "bin/brain-prime"
     ],   
     "autoload": {
         "files": [
             "src/cli.php",
             "src/even.php",
             "src/gcd.php",
-            "src/progression.php"
+            "src/progression.php",
+            "src/prime.php"
         ]
     },
     "license": "MIT",
