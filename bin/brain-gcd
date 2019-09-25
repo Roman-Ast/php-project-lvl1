@@ -1,10 +1,7 @@
 #! /usr/bin/env php
-"Welcome to the Brain Games!"
-Find the greatest common divisor of given numbers.
 
 <?php
 
-use function BrainGames\Cli\run;
 use function BrainGames\Cli\games\gcd;
 
 $loadPath1 = __DIR__.'/../../../autoload.php';
@@ -15,6 +12,4 @@ if (file_exists($loadPath1)) {
     require_once $loadPath2;
 }
 
-$user = run();
-print_r("\n");
-gcd($user);
+gcd();

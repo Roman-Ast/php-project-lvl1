@@ -12,6 +12,7 @@
         "phpcs": "phpcs"
     },
     "bin": [
+        "bin/brain-calc",
         "bin/brain-games",
         "bin/brain-even",
         "bin/brain-gcd",
@@ -21,15 +22,15 @@
     "autoload": {
         "files": [
             "src/cli.php",
+            "src/engine.php",
             "src/games/even.php",
             "src/games/gcd.php",
             "src/games/progression.php",
             "src/games/prime.php",
-            "src/games/helpers/helpers.php"
+            "src/games/calc.php"
         ]
     },
     "license": "MIT",
-    "minimum-stability": "dev",
     "require": {
         "wp-cli/php-cli-tools": "^0.11.11"
     },

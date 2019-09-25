@@ -1,52 +1,29 @@
 <?php
 
-/**
- * This function implements logic of game 'prime'
- *
- * PHP version 7.2
- *
- * @category PHP
- * @package  Php-project-lvl1
- * @author   Popadinets Roman <roman_planeta@mail.ru>
- * @license  https://github.com/Roman-Ast/php-project-lvl1 MIT
- * @link     https://github.com/Roman-Ast/php-project-lvl1
- */
-
 namespace BrainGames\Cli\games;
 
-use function cli\line;
-use function cli\prompt;
-use function BrainGames\Cli\games\helpers\randomNumber;
-use function BrainGames\Cli\games\helpers\isPrime;
+use function BrainGames\Cli\playTheGame;
 
-/**
- * This function is to interract with users
- *
- * @param string  $user  - is name of user, recieved from STDIN
- * @param integer $round - is count of rounds completed by user
- *
- * @return game or void;
- */
-function prime($user, $round = 1)
+const GAME_LOGIC_PRIME = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+function isPrime(int $num)
 {
-    $questionNumber = randomNumber(1, 500);
-    line("Question: {$questionNumber}");
-    $userAnswer = prompt('Your answer?');
-
-    $correct = isPrime($questionNumber);
-
-    if ($userAnswer === $correct) {
-        line("Correct!");
-        if ($round >= 3) {
-            line("Congratulations, {$user}!");
-            return;
+    for ($i = 2; $i < sqrt($num); $i++) {
+        if ($num % $i === 0) {
+            return false;
         }
-        prime($user, $round += 1);
-    } else {
-        line(
-            "'{$userAnswer}' is wrong answer ;(. Correct answer was '{$correct}'"
-        );
-        line("Let's try again, {$user}!");
-        return;
     }
+    return true;
+}
+
+function prime()
+{
+    $gamePrime = function () {
+        $questionNumber = rand(1, 100);
+        $correct = isPrime($questionNumber) === true ? 'yes' : 'no';
+
+        return [ $questionNumber, $correct ];
+    };
+
+    playTheGame($gamePrime, GAME_LOGIC_PRIME);
 }

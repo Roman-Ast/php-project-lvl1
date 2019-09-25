@@ -25,3 +25,7 @@
 ### Launch brain-prime:
 
 [![asciicast](https://asciinema.org/a/Gq16bso59NscBTeua6koERKX4.svg)](https://asciinema.org/a/Gq16bso59NscBTeua6koERKX4)
+
+### Launch brain-calc:
+
+[![asciicast](https://asciinema.org/a/5Doad1ivVXcxzYz7mPH7trjxa.svg)](https://asciinema.org/a/5Doad1ivVXcxzYz7mPH7trjxa)
