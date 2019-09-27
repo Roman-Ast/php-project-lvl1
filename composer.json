@@ -13,7 +13,6 @@
     },
     "bin": [
         "bin/brain-calc",
-        "bin/brain-games",
         "bin/brain-even",
         "bin/brain-gcd",
         "bin/brain-progression",
@@ -21,7 +20,6 @@
     ],   
     "autoload": {
         "files": [
-            "src/cli.php",
             "src/engine.php",
             "src/games/even.php",
             "src/games/gcd.php",

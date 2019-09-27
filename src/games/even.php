@@ -2,23 +2,23 @@
 
 namespace BrainGames\Cli\games;
 
-use function BrainGames\Cli\playTheGame;
+use function BrainGames\Cli\play;
 
-const GAME_LOGIC_EVEN = 'Answer "yes" if the number is even, otherwise answer "no".';
+const DESCRIPTION_EVEN = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function isEven(int $num)
 {
-    return $num % 2 === 0 ? true : false;
+    return $num % 2 === 0;
 }
 
 function even()
 {
-    $gameEven = function () {
-        $questionNumber = rand(1, 100);
-        $correct = isEven($questionNumber) === true ? 'yes' : 'no';
+    $createGameData = function () {
+        $question = rand(1, 100);
+        $correctAnswer = isEven($question) ? 'yes' : 'no';
 
-        return [ $questionNumber, $correct ];
+        return [$question, $correctAnswer];
     };
 
-    playTheGame($gameEven, GAME_LOGIC_EVEN);
+    play($createGameData, DESCRIPTION_EVEN);
 }

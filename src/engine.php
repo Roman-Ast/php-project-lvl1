@@ -4,24 +4,30 @@ namespace BrainGames\Cli;
 
 use function cli\line;
 use function cli\prompt;
-use function BrainGames\Cli\run;
 
-function playTheGame(callable $gameData, string $gameLogic, int $round = 1, string $user = '')
+const ROUNDS_MAX_QUANTITY = 3;
+
+function play(callable $gameData, string $gameDescription)
 {
-    $user = $user === '' ? run($gameLogic) : $user;
+    line("Welcome to the Brain Games!");
+    line("{$gameDescription}\n");
 
-    [ $question, $correctAnswer ] = $gameData();
-    $userAnswer = prompt("Question {$question}");
+    $user = prompt("May I have your name?");
+    line("Hello, {$user}!\n");
 
-    if ((int)$userAnswer !== (int)$correctAnswer) {
-        line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
-        line("Let's try again, {$user}!");
-        return;
+    for ($round = 0; $round < ROUNDS_MAX_QUANTITY; $round++) {
+        [$question, $correctAnswer] = $gameData();
+
+        $userAnswer = prompt("Question {$question}");
+
+        if ($userAnswer != $correctAnswer) {
+            line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
+            line("Let's try again, {$user}!");
+            return;
+        }
+
+        line("Correct!");
     }
-    line("Correct!");
-    while ($round < 3) {
-        return playTheGame($gameData, $gameLogic, $round += 1, $user);
-    }
-    line("Congratulations, {$user}!");
-    return;
+
+    line("Congratulations, ${user}!");
 }

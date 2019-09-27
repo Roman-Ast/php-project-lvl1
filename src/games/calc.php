@@ -2,13 +2,13 @@
 
 namespace BrainGames\Cli\games;
 
-use function BrainGames\Cli\playTheGame;
+use function BrainGames\Cli\play;
 
-const GAME_LOGIC_CALC = 'What is the result of the expression?';
+const DESCRIPTION_CALC = 'What is the result of the expression?';
 
 function calc()
 {
-    $gameCalc = function () {
+    $createGameData = function () {
         $operations = [
             '+' => function ($num1, $num2) {
                 return $num1 + $num2;
@@ -21,14 +21,15 @@ function calc()
             }
         ];
 
-        $randomFirst = rand(1, 100);
-        $randomSecond = rand(1, 100);
-
+        $first = rand(1, 100);
+        $second = rand(1, 100);
         $operation = array_rand($operations, 1);
 
-        $correct = $operations[$operation]($randomFirst, $randomSecond);
-        return ["{$randomFirst} {$operation} {$randomSecond}", $correct];
+        $correctAnswer = $operations[$operation]($first, $second);
+        $question = "{$first} {$operation} {$second}";
+
+        return [$question, $correctAnswer];
     };
     
-    playTheGame($gameCalc, GAME_LOGIC_CALC);
+    play($createGameData, DESCRIPTION_CALC);
 }

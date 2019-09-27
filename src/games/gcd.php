@@ -2,20 +2,20 @@
 
 namespace BrainGames\Cli\games;
 
-use function BrainGames\Cli\playTheGame;
+use function BrainGames\Cli\play;
 
-const GAME_LOGIC_GCD = "Find the greatest common divisor of given numbers.";
+const DESCRIPTION_GCD = "Find the greatest common divisor of given numbers.";
 
 function makeTwoNumbersWithCommonGcd()
 {
-    $random1 = rand(1, 100);
-    $random2 = rand(1, 100);
+    $first = rand(1, 100);
+    $second = rand(1, 100);
 
-    if (!hasGcd($random1, $random2)) {
+    if (!hasGcd($first, $second)) {
         return makeTwoNumbersWithCommonGcd();
     }
 
-    return [$random1, $random2];
+    return [$first, $second];
 }
 
 function hasGcd(int $n, int $m)
@@ -26,21 +26,19 @@ function hasGcd(int $n, int $m)
 
 function findGcd(int $n, int $m)
 {
-    if ($m > 0) {
-        return findGcd($m, $n % $m);
-    } else {
-        return abs($n);
-    }
+    return $m > 0 ? findGcd($m, $n % $m) : abs($n);
 }
 
-function GCD()
+function gcd()
 {
-    $gameGCD = function () {
+    $createGameData = function () {
         [$firstNum, $secondNum] = makeTwoNumbersWithCommonGcd();
-        $correct = findGcd($firstNum, $secondNum);
 
-        return [ "{$firstNum} {$secondNum}", $correct ];
+        $correctAnswer = findGcd($firstNum, $secondNum);
+        $question = "{$firstNum} {$secondNum}";
+
+        return [$question, $correctAnswer];
     };
 
-    playTheGame($gameGCD, GAME_LOGIC_GCD);
+    play($createGameData, DESCRIPTION_GCD);
 }
