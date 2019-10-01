@@ -5,14 +5,14 @@ namespace BrainGames\Cli\games;
 use function BrainGames\Cli\play;
 
 const DESCRIPTION_PROGRESSION = "What number is missing in the progression?";
-const PROGRESSION_MAX_LENGTH = 10;
-const PROGRESSION_MAX_STEP = 10;
+const PROGRESSION_LENGTH = 10;
+const PROGRESSION_STEP = 10;
 
-function buildProgression(int $constant, int $progressionMaxLength)
+function buildProgression(int $progressionStart, int $progressionStep, int $progressionLength)
 {
     $progression = [];
-    for ($i = 0; $i < $progressionMaxLength; $i++) {
-        $progression[] =  $i + $constant * $i;
+    for ($i = 0; $i < $progressionLength; $i += 1) {
+        $progression[] = $progressionStart + $progressionStep * $i;
     }
     return $progression;
 }
@@ -20,13 +20,14 @@ function buildProgression(int $constant, int $progressionMaxLength)
 function progression()
 {
     $createGameData = function () {
-        $hiddenElementIndex = rand(0, PROGRESSION_MAX_LENGTH - 1);
-        $progressionStep = rand(1, PROGRESSION_MAX_STEP);
-        $progression = buildProgression($progressionStep, PROGRESSION_MAX_LENGTH);
-        $hiddenElement = array_splice($progression, $hiddenElementIndex, 1, '..')[0];
+        $progressionStart = rand(1, 10);
+        $progressionStep = rand(1, 10);
+        $hiddenElementIndex = rand(0, PROGRESSION_LENGTH - 1);
+        $progression = buildProgression($progressionStart, $progressionStep, PROGRESSION_LENGTH);
+        $answer = array_splice($progression, $hiddenElementIndex, 1, '..')[0];
         $question = implode(' ', $progression);
 
-        return [$question, $hiddenElement];
+        return [$question, $answer];
     };
 
     play($createGameData, DESCRIPTION_PROGRESSION);

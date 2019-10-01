@@ -32,10 +32,10 @@ function findGcd(int $n, int $m)
 function gcd()
 {
     $createGameData = function () {
-        [$firstNum, $secondNum] = makeTwoNumbersWithCommonGcd();
+        [$first, $second] = makeTwoNumbersWithCommonGcd();
 
-        $correctAnswer = findGcd($firstNum, $secondNum);
-        $question = "{$firstNum} {$secondNum}";
+        $correctAnswer = findGcd($first, $second);
+        $question = "{$first} {$second}";
 
         return [$question, $correctAnswer];
     };
