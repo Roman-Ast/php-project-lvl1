@@ -34,7 +34,7 @@ You should find the greatest common divisor of two numbers
 
 * brain-progression
 
-You should determine hidden element of proression
+You should determine hidden element of progression
 
 [![asciicast](https://asciinema.org/a/pN5d8xFdLQRgc0HAFsOBiCNDI.svg)](https://asciinema.org/a/pN5d8xFdLQRgc0HAFsOBiCNDI)
 

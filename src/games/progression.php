@@ -24,10 +24,11 @@ function progression()
         $progressionStep = rand(1, 10);
         $hiddenElementIndex = rand(0, PROGRESSION_LENGTH - 1);
         $progression = buildProgression($progressionStart, $progressionStep, PROGRESSION_LENGTH);
-        $answer = array_splice($progression, $hiddenElementIndex, 1, '..')[0];
+
+        $correctAnswer = array_splice($progression, $hiddenElementIndex, 1, '..')[0];
         $question = implode(' ', $progression);
 
-        return [$question, $answer];
+        return [$question, $correctAnswer];
     };
 
     play($createGameData, DESCRIPTION_PROGRESSION);
