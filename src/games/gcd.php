@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainGames\Cli\games;
+namespace BrainGames\Games\Gcd;
 
-use function BrainGames\Cli\play;
+use function BrainGames\Engine\play;
 
 const DESCRIPTION_GCD = "Find the greatest common divisor of given numbers.";
 
@@ -29,7 +29,7 @@ function findGcd(int $n, int $m)
     return $m > 0 ? findGcd($m, $n % $m) : abs($n);
 }
 
-function gcd()
+function runGcd()
 {
     $createGameData = function () {
         [$first, $second] = makeTwoNumbersWithCommonGcd();

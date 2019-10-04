@@ -1,29 +1,28 @@
 <?php
 
-namespace BrainGames\Cli\games;
+namespace BrainGames\Games\Progression;
 
-use function BrainGames\Cli\play;
+use function BrainGames\Engine\play;
 
 const DESCRIPTION_PROGRESSION = "What number is missing in the progression?";
 const PROGRESSION_LENGTH = 10;
-const PROGRESSION_STEP = 10;
 
-function buildProgression(int $progressionStart, int $progressionStep, int $progressionLength)
+function buildProgression(int $start, int $step, int $length)
 {
     $progression = [];
-    for ($i = 0; $i < $progressionLength; $i += 1) {
-        $progression[] = $progressionStart + $progressionStep * $i;
+    for ($i = 0; $i < $length; $i += 1) {
+        $progression[] = $start + $step * $i;
     }
     return $progression;
 }
 
-function progression()
+function runProgression()
 {
     $createGameData = function () {
-        $progressionStart = rand(1, 10);
-        $progressionStep = rand(1, 10);
+        $start = rand(1, PROGRESSION_LENGTH);
+        $step = rand(1, 10);
         $hiddenElementIndex = rand(0, PROGRESSION_LENGTH - 1);
-        $progression = buildProgression($progressionStart, $progressionStep, PROGRESSION_LENGTH);
+        $progression = buildProgression($start, $step, PROGRESSION_LENGTH);
 
         $correctAnswer = array_splice($progression, $hiddenElementIndex, 1, '..')[0];
         $question = implode(' ', $progression);

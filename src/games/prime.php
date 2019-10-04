@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainGames\Cli\games;
+namespace BrainGames\Games\Prime;
 
-use function BrainGames\Cli\play;
+use function BrainGames\Engine\play;
 
 const DESCRIPTION_PRIME = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -19,7 +19,7 @@ function isPrime(int $num)
     return true;
 }
 
-function prime()
+function runPrime()
 {
     $createGameData = function () {
         $question = rand(1, 100);

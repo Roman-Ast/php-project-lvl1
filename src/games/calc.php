@@ -1,12 +1,12 @@
 <?php
 
-namespace BrainGames\Cli\games;
+namespace BrainGames\Games\Calc;
 
-use function BrainGames\Cli\play;
+use function BrainGames\Engine\play;
 
 const DESCRIPTION_CALC = 'What is the result of the expression?';
 
-function calc()
+function runCalc()
 {
     $createGameData = function () {
         $operations = [
@@ -26,7 +26,7 @@ function calc()
         $operation = array_rand($operations, 1);
 
         $correctAnswer = $operations[$operation]($first, $second);
-        $question = "{$first} {$operation} {$second}";
+        $question = "$first $operation $second";
 
         return [$question, $correctAnswer];
     };
